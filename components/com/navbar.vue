@@ -20,7 +20,7 @@
           </div>
          
           <div class="flex items-center gap-4 shrink-0 text-xl">
-            <NuxtLink to="/cart" class="relative">
+            <NuxtLink to="/" class="relative">
               <span class="bg-red-500 w-5 h-5 flex justify-center items-center text-white rounded-full absolute top-2 -right-2 text-sm ">{{ cart.length }}</span>
               <IconCart />
             </NuxtLink> 
