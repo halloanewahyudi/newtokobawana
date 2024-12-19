@@ -12,6 +12,13 @@ export const useCart = () => {
       cart.value.push({ ...item, qty: 1 });
     }
   };
+ // menambahkan quantity
+  const addQty = (id: number) => {
+    const existingItem = cart.value.find((cartItem) => cartItem.id === id);
+    if (existingItem) {
+      existingItem.qty++;
+    }
+  } 
 
   const removeFromCart = (id: number) => {
     const index = cart.value.findIndex((cartItem) => cartItem.id === id);
@@ -37,5 +44,5 @@ export const useCart = () => {
     cart.value.reduce((sum, item) => sum + item.price * item.qty, 0)
   );
 
-  return { cart, addToCart, removeFromCart, decreaseQty, totalItems, totalPrice };
+  return { cart, addToCart, removeFromCart, decreaseQty, addQty ,totalItems, totalPrice };
 };

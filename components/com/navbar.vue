@@ -51,7 +51,7 @@ const { login, logout, initAuth, token } = useAuth();
 const { getApi, wcConsumerKey, wcConsumerSecret } = useApi();
 const {cart, addToCart, removeFromCart, decreaseQty} = useCart();
 const logedIn = ref(false);
-const catopen = ref(false);
+const { catopen } = useNav();
 onMounted(() => {
   initAuth();
 })
